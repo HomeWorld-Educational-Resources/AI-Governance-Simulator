@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+outputs/
+.pytest_cache/
+.streamlit/secrets.toml
+.env
+.env.*
+!.env.example

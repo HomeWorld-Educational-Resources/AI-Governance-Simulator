@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-governance-simulator"
+version = "0.1.0"
+description = "Reproducible synthetic experiments for AI-assisted lending governance"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dashboard = ["streamlit>=1.50,<2", "pandas>=2,<3", "plotly>=5,<7"]
+
+[project.scripts]
+governance-sim = "governance_sim.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["governance_sim*"]
+
+[tool.setuptools.package-data]
+governance_sim = ["data/*.json"]
